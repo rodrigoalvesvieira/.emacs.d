@@ -73,6 +73,11 @@
   :ensure t
   :init (global-flycheck-mode))
 
+;;; PACKAGE: auto-complete
+(use-package auto-complete
+  :ensure t
+  :init (ac-config-default))
+
 ;;; PACKAGE: ido-completing-read+
 (use-package ido-completing-read+
   :ensure t

@@ -57,12 +57,6 @@
 ;;;(setq ns-use-proxy-icon nil)
 (setq frame-title-format nil)
 
-(global-set-key "\M-(" (lambda () (interactive) (insert "{")))
-(global-set-key "\M-)" (lambda () (interactive) (insert "}")))
-
-(global-set-key "\M-8" (lambda () (interactive) (insert "[")))
-(global-set-key "\M-9" (lambda () (interactive) (insert "]")))
-
 ;;; THEME SETUP
 ;;; PACKAGE: ample-theme
 (use-package ample-theme
@@ -96,7 +90,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (editorconfig markdown-mode gitignore-mode gitginore gitginore-mode gitconfig-mode go-mode org-bullets poet-theme poet magit-find-file company-mode magit ido-completing-read+ ido-ubiquitous-mod ein fira-code-mode q-mode flycheck ample-theme use-package projectile parinfer cyberpunk-theme ampc ag))))
+    (auto-complete editorconfig markdown-mode gitignore-mode gitginore gitginore-mode gitconfig-mode go-mode org-bullets poet-theme poet magit-find-file company-mode magit ido-completing-read+ ido-ubiquitous-mod ein fira-code-mode q-mode flycheck ample-theme use-package projectile parinfer cyberpunk-theme ampc ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -104,6 +98,7 @@
  ;; If there is more than one, they won't work right.
  )
 
+(load "~/.emacs.d/key-bindings")
 (load "~/.emacs.d/ido-preferences")
 (load "~/.emacs.d/bells")
 (load "~/.emacs.d/backups")
