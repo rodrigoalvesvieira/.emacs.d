@@ -21,6 +21,17 @@
 (use-package gitignore-mode
   :ensure t)
 
+;;; PACKAGE: git-gutter
+(use-package git-gutter
+  :ensure t
+  :config
+  (global-git-gutter-mode +1))
+
+
+;;; PACKAGE: origami
+(use-package origami
+  :ensure t)
+
 ;;; PACKAGE: markdown-mode
 (use-package markdown-mode
   :ensure t
