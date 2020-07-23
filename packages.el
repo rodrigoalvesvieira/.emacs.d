@@ -118,5 +118,36 @@
   :config (autoload 'go-mode "go-mode" nil t)
   (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode)))
 
+(setq lsp-keymap-prefix "s-l")
+
+;;; PACKAGE: lsp-mode
+(use-package lsp-mode
+    :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
+            (XXX-mode . lsp)
+            ;; if you want which-key integration
+            (lsp-mode . lsp-enable-which-key-integration))
+    :commands lsp)
+
+;;; PACKAGE: lsp-ui
+(use-package lsp-ui :commands lsp-ui-mode)
+
+;;; PACKAGE: helm-lsp
+(use-package helm-lsp :commands helm-lsp-workspace-symbol)
+
+;;; PACKAGE: lsp-ivy
+(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
+
+;;; PACKAGE: lsp-treemacs
+(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+
+;;; PACKAGE: dap-mode
+(use-package dap-mode)
+;; (use-package dap-LANGUAGE) to load the dap adapter for your language
+
+;;; PACKAGE: which-key
+(use-package which-key
+    :config
+    (which-key-mode))
+
 (provide 'packages)
 ;;; packages.el ends here
