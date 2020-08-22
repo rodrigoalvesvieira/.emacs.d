@@ -112,6 +112,18 @@
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
+;;; PACKAGE: elpy
+(use-package elpy
+  :ensure t
+  :init
+  (elpy-enable))
+
+;;; PACKAGE: py-autopep8
+(use-package py-autopep8
+  :ensure t
+  :config
+  (add-hook 'python-mode-hook 'py-autopep8-enable-on-save))
+
 ;;; PACKAGE: go-mode
 (use-package go-mode
   :ensure t
