@@ -112,6 +112,12 @@
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
+;;; PACKAGE: org-sticky-header
+;;;(use-package org-sticky-header
+;;;:ensure t
+;;;  :config
+;;;  (add-hook 'org-mode-hook (lambda () (org-sticky-header-mode 1))))
+
 ;;; PACKAGE: elpy
 (use-package elpy
   :ensure t
@@ -124,11 +130,26 @@
   :config
   (add-hook 'python-mode-hook 'py-autopep8-enable-on-save))
 
+;;; PACKAGE: tuareg (OCaml mode)
+(use-package tuareg
+  :ensure t
+  :config
+  (add-hook 'tuareg-mode-hook
+	    ;; Turn on auto-fill minor mode.
+	    #'auto-fill-mode))
+
 ;;; PACKAGE: go-mode
 (use-package go-mode
   :ensure t
-  :config (autoload 'go-mode "go-mode" nil t)
+  :config
+  (autoload 'go-mode "go-mode" nil t)
+  (add-hook 'before-save-hook 'gofmt-before-save)
   (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode)))
+
+;;; PACKAGE: julia-mode
+(use-package julia-mode
+  :ensure t
+  :config)
 
 (setq lsp-keymap-prefix "s-l")
 

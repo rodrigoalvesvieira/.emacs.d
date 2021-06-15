@@ -49,8 +49,8 @@
 (global-visual-line-mode t)
 
 ;;; Window style
-(add-to-list 'default-frame-alist '(height . 36))
-(add-to-list 'default-frame-alist '(width . 80))
+(add-to-list 'default-frame-alist '(height . 42))
+(add-to-list 'default-frame-alist '(width . 94))
 
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
@@ -70,7 +70,7 @@
 
 (use-package solarized-theme
   :config
-  (load-theme 'solarized-light t)
+  (load-theme 'solarized-dark t)
   (let ((line (face-attribute 'mode-line :underline)))
     (set-face-attribute 'mode-line          nil :overline   line)
     (set-face-attribute 'mode-line-inactive nil :overline   line)
@@ -89,7 +89,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(elpy py-autopep8 goflymake go-flymake ## which-key dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode git-gutter origami auto-complete editorconfig markdown-mode gitignore-mode gitginore gitginore-mode gitconfig-mode go-mode org-bullets poet-theme poet magit-find-file company-mode magit ido-completing-read+ ido-ubiquitous-mod ein fira-code-mode q-mode flycheck ample-theme use-package projectile parinfer cyberpunk-theme ampc ag)))
+   '(tuareg org-sticky-header org-sticky-header-mode julia-mode elpy py-autopep8 goflymake go-flymake ## which-key dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode git-gutter origami auto-complete editorconfig markdown-mode gitignore-mode gitginore gitginore-mode gitconfig-mode go-mode org-bullets poet-theme poet magit-find-file company-mode magit ido-completing-read+ ido-ubiquitous-mod ein fira-code-mode q-mode flycheck ample-theme use-package projectile parinfer cyberpunk-theme ampc ag)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -104,6 +104,8 @@
 (load "~/.emacs.d/packages")
 
 (add-to-list 'auto-mode-alist '("\\.cls\\'" . java-mode))
+
+(setq byte-compile-warnings '(cl-functions))
 
 (provide 'init)
 ;;; init.el ends here
