@@ -151,6 +151,18 @@
   :ensure t
   :config)
 
+;;; PACKAGE: yaml-mode
+(use-package yaml-mode
+  :ensure t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode)))
+
+;;; PACKAGE: jsonnet-mode
+(use-package jsonnet-mode
+  :ensure t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.jsonnet\\'" . jsonnet-mode)))
+
 (setq lsp-keymap-prefix "s-l")
 
 ;;; PACKAGE: lsp-mode
