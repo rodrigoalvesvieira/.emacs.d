@@ -50,7 +50,7 @@
 
 ;;; Window style
 (add-to-list 'default-frame-alist '(height . 42))
-(add-to-list 'default-frame-alist '(width . 94))
+(add-to-list 'default-frame-alist '(width . 122))
 
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
