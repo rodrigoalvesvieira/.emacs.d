@@ -194,5 +194,10 @@
     :config
     (which-key-mode))
 
+;;; PACKAGE: speed-type
+(use-package speed-type
+  :ensure t
+  :config)
+
 (provide 'packages)
 ;;; packages.el ends here
