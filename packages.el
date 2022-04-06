@@ -89,6 +89,17 @@
   :ensure t
   :init (ac-config-default))
 
+;;; PACKAGE: ido
+(use-package ido
+  :disabled
+  :config
+  (ido-mode t)
+  (ido-everywhere 1)
+  (setq ido-use-virtual-buffers t)
+  (setq ido-enable-flex-matching t)
+  (setq ido-use-filename-at-point nil)
+  (setq ido-auto-merge-work-directories-length -1))
+
 ;;; PACKAGE: ido-completing-read+
 (use-package ido-completing-read+
   :ensure t
@@ -167,14 +178,19 @@
 
 ;;; PACKAGE: lsp-mode
 (use-package lsp-mode
-    :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
-            (XXX-mode . lsp)
-            ;; if you want which-key integration
-            (lsp-mode . lsp-enable-which-key-integration))
-    :commands lsp)
+  :hook ((go-mode ruby-mode Z-mode) . lsp-deferred)
+  :commands lsp)
 
 ;;; PACKAGE: lsp-ui
-(use-package lsp-ui :commands lsp-ui-mode)
+(use-package lsp-ui
+  :commands lsp-ui-mode
+  :config
+  (setq lsp-ui-doc-enable nil)
+  (setq lsp-ui-doc-header t)
+  (setq lsp-ui-doc-include-signature t)
+  (setq lsp-ui-doc-border (face-foreground 'default))
+  (setq lsp-ui-sideline-show-code-actions t)
+  (setq lsp-ui-sideline-delay 0.05))
 
 ;;; PACKAGE: helm-lsp
 (use-package helm-lsp :commands helm-lsp-workspace-symbol)

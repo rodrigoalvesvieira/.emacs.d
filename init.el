@@ -40,8 +40,8 @@
 (tool-bar-mode -1)
 
 ;;; Font style
-(set-frame-font "Fira Code Symbol 14" nil t)
-(let ((font "Fira Code 15"))
+(set-frame-font "JetBrains Mono 15" nil t)
+(let ((font "JetBrains Mono 15"))
   (set-frame-font font)
   (add-to-list 'default-frame-alist
                `(font . ,font)))
@@ -50,7 +50,7 @@
 
 ;;; Window style
 (add-to-list 'default-frame-alist '(height . 42))
-(add-to-list 'default-frame-alist '(width . 122))
+(add-to-list 'default-frame-alist '(width . 108))
 
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
@@ -89,7 +89,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(speed-type jsonnet-mode yaml-mode tuareg org-sticky-header org-sticky-header-mode julia-mode elpy py-autopep8 goflymake go-flymake ## which-key dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode git-gutter origami auto-complete editorconfig markdown-mode gitignore-mode gitginore gitginore-mode gitconfig-mode go-mode org-bullets poet-theme poet magit-find-file company-mode magit ido-completing-read+ ido-ubiquitous-mod ein fira-code-mode q-mode flycheck ample-theme use-package projectile parinfer cyberpunk-theme ampc ag)))
+   '(org-mode speed-type jsonnet-mode yaml-mode tuareg org-sticky-header org-sticky-header-mode julia-mode elpy py-autopep8 goflymake go-flymake ## which-key dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode git-gutter origami auto-complete editorconfig markdown-mode gitignore-mode gitginore gitginore-mode gitconfig-mode go-mode org-bullets poet-theme poet magit-find-file company-mode magit ido-completing-read+ ido-ubiquitous-mod ein fira-code-mode q-mode flycheck ample-theme use-package projectile parinfer cyberpunk-theme ampc ag)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
