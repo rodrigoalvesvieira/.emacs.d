@@ -107,5 +107,8 @@
 
 (setq byte-compile-warnings '(cl-functions))
 
+;; C-u C-c C-q
+(setq org-tags-column 160)
+
 (provide 'init)
 ;;; init.el ends here
