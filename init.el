@@ -40,8 +40,8 @@
 (tool-bar-mode -1)
 
 ;;; Font style
-(set-frame-font "JetBrains Mono 15" nil t)
-(let ((font "JetBrains Mono 15"))
+(set-frame-font "JetBrains Mono 14" nil t)
+(let ((font "JetBrains Mono 14"))
   (set-frame-font font)
   (add-to-list 'default-frame-alist
                `(font . ,font)))
@@ -50,7 +50,7 @@
 
 ;;; Window style
 (add-to-list 'default-frame-alist '(height . 42))
-(add-to-list 'default-frame-alist '(width . 108))
+(add-to-list 'default-frame-alist '(width . 178))
 
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
@@ -108,7 +108,9 @@
 (setq byte-compile-warnings '(cl-functions))
 
 ;; C-u C-c C-q
-(setq org-tags-column 160)
+(setq org-tags-column 148)
+
+(setq org-image-actual-width nil)
 
 (provide 'init)
 ;;; init.el ends here

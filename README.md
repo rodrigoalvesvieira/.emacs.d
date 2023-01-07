@@ -17,4 +17,4 @@ $ git clone git@github.com:rodrigoalvesvieira/.emacs.d.git
 
 ## Copyright
 
-© 2020-2022 Rodrigo Alves Vieira
+© 2020-2023 Rodrigo Alves Vieira
