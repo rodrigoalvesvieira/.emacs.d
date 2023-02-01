@@ -46,6 +46,12 @@
   (add-to-list 'default-frame-alist
                `(font . ,font)))
 
+(set-frame-font "Berkeley Mono 14" nil t)
+(let ((font "Berkeley Mono 14"))
+  (set-frame-font font)
+  (add-to-list 'default-frame-alist
+               `(font . ,font)))
+
 (global-visual-line-mode t)
 
 ;;; Window style
@@ -59,25 +65,22 @@
 
 ;;; THEME SETUP
 ;;; PACKAGE: ample-theme
+(load-theme 'ample t t)
+(load-theme 'ample-flat t t)
+(load-theme 'ample-light t t)
+;; choose one to enable
+(enable-theme 'ample-light)
+;; (enable-theme 'ample-flat)
+;; (enable-theme 'ample-light)
+
+;; Or, if you use `use-package', do something like this:
 (use-package ample-theme
-  :init (progn (load-theme 'ample-light t t)
-	       (enable-theme 'ample-light))
+  :init (progn (load-theme 'ample t t)
+               (load-theme 'ample-flat t t)
+               (load-theme 'ample-light t t)
+               (enable-theme 'ample-light))
   :defer t
   :ensure t)
-
-(setq solarized-use-variable-pitch nil
-      solarized-scale-org-headlines nil)
-
-(use-package solarized-theme
-  :config
-  (load-theme 'solarized-dark t)
-  (let ((line (face-attribute 'mode-line :underline)))
-    (set-face-attribute 'mode-line          nil :overline   line)
-    (set-face-attribute 'mode-line-inactive nil :overline   line)
-    (set-face-attribute 'mode-line-inactive nil :underline  line)
-    (set-face-attribute 'mode-line          nil :box        nil)
-    (set-face-attribute 'mode-line-inactive nil :box        nil)
-    (set-face-attribute 'mode-line-inactive nil :background "#f9f2d9")))
 
 ;;; Trailing Whitespaces
 (setq require-final-newline t)
