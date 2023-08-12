@@ -21,13 +21,6 @@
 (use-package gitignore-mode
   :ensure t)
 
-;;; PACKAGE: git-gutter
-(use-package git-gutter
-  :ensure t
-  :config
-  (global-git-gutter-mode +1))
-
-
 ;;; PACKAGE: origami
 (use-package origami
   :ensure t)
@@ -65,13 +58,6 @@
   (moody-replace-mode-line-buffer-identification)
   (moody-replace-vc-mode))
 
-;;; PACKAGE: emacs-jupyter
-(use-package jupyter
-  :ensure t)
-
-;;; PACKAGE: emacs-ipython-notebook
-(use-package ein
-  :ensure t)
 
 ;;; PACKAGE: EditorConfig
 (use-package editorconfig
@@ -122,12 +108,6 @@
   :ensure t
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
-
-;;; PACKAGE: org-sticky-header
-;;;(use-package org-sticky-header
-;;;:ensure t
-;;;  :config
-;;;  (add-hook 'org-mode-hook (lambda () (org-sticky-header-mode 1))))
 
 ;;; PACKAGE: elpy
 (use-package elpy
