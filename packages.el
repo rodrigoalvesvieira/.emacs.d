@@ -109,6 +109,15 @@
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
+;;; PACKAGE: org-side-tree
+(use-package org-side-tree
+  :ensure t
+  :config
+  (add-hook 'emacs-lisp-mode-hook (lambda () (setq-local outline-regexp ";;;\\(;* [^   \t\n]\\)")))
+  (add-hook 'emacs-lisp-mode-hook 'outline-minor-mode))
+
+
+
 ;;; PACKAGE: elpy
 (use-package elpy
   :ensure t
