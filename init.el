@@ -39,6 +39,13 @@
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 
+(use-package org-modern-indent
+  :load-path "~/.emacs.d/org-modern-indent"
+  ; or
+  ; :straight (org-modern-indent :type git :host github :repo "jdtsmith/org-modern-indent"))
+  :config ; add late to hook
+  (add-hook 'org-mode-hook #'org-modern-indent-mode 90))
+
 ;;; Font style
 (set-frame-font "Berkeley Mono 14" nil t)
 (let ((font "Berkeley Mono 14"))
@@ -74,7 +81,7 @@
  '(custom-safe-themes
    '("6a86067ea3608f4a53f25d11c2fc585677202bcd9cfd75090b90ad798a1c9605" default))
  '(package-selected-packages
-   '(org-side-tree orderless marginalia green-phosphor-theme smartscan org-mode speed-type jsonnet-mode yaml-mode tuareg org-sticky-header org-sticky-header-mode julia-mode elpy py-autopep8 goflymake go-flymake ## which-key dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode git-gutter origami auto-complete editorconfig markdown-mode gitignore-mode gitginore gitginore-mode gitconfig-mode go-mode org-bullets poet-theme poet magit-find-file company-mode magit ido-completing-read+ ido-ubiquitous-mod ein fira-code-mode q-mode flycheck ample-theme use-package projectile parinfer cyberpunk-theme ampc ag)))
+   '(vertico org-side-tree orderless marginalia green-phosphor-theme smartscan org-mode speed-type jsonnet-mode yaml-mode tuareg org-sticky-header org-sticky-header-mode julia-mode elpy py-autopep8 goflymake go-flymake ## which-key dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode git-gutter origami auto-complete editorconfig markdown-mode gitignore-mode gitginore gitginore-mode gitconfig-mode go-mode org-bullets poet-theme poet magit-find-file company-mode magit ido-completing-read+ ido-ubiquitous-mod ein fira-code-mode q-mode flycheck ample-theme use-package projectile parinfer cyberpunk-theme ampc ag)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

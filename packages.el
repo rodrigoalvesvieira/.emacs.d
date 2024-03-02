@@ -13,14 +13,6 @@
   :config
   (global-set-key (kbd "C-c p") 'magit-find-file-completing-read))
 
-;;; PACKAGE: gitconfig-mode
-(use-package gitconfig-mode
-  :ensure t)
-
-;;; PACKAGE: gitignore-mode
-(use-package gitignore-mode
-  :ensure t)
-
 ;;; PACKAGE: origami
 (use-package origami
   :ensure t)
@@ -98,16 +90,11 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.[kq]\\'" . q-mode)))
 
-;;; PACKAGE: fira-code-mode
-(use-package fira-code-mode
-  :custom (fira-code-mode-disabled-ligatures '("[]" "#{" "#(" "#_" "#_(" "x")) ;; List of ligatures to turn off
-  :hook prog-mode) ;; Enables fira-code-mode automatically for programming major modes
-
 ;;; PACKAGE: org-bullets
-(use-package org-bullets
-  :ensure t
-  :config
-  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+;;;(use-package org-bullets
+;;;  :ensure t
+;;;  :config
+;;;  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 ;;; PACKAGE: org-side-tree
 (use-package org-side-tree
@@ -115,8 +102,6 @@
   :config
   (add-hook 'emacs-lisp-mode-hook (lambda () (setq-local outline-regexp ";;;\\(;* [^   \t\n]\\)")))
   (add-hook 'emacs-lisp-mode-hook 'outline-minor-mode))
-
-
 
 ;;; PACKAGE: elpy
 (use-package elpy
@@ -145,11 +130,6 @@
   (autoload 'go-mode "go-mode" nil t)
   (add-hook 'before-save-hook 'gofmt-before-save)
   (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode)))
-
-;;; PACKAGE: julia-mode
-(use-package julia-mode
-  :ensure t
-  :config)
 
 ;;; PACKAGE: yaml-mode
 (use-package yaml-mode

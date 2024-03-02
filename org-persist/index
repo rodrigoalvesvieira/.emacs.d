@@ -1,0 +1,15 @@
+((:container
+  ((elisp org-element--headline-cache)
+   (elisp org-element--cache))
+  :persist-file "76/0ed9b8-2adc-44df-9e1b-1b2d16970df8" :associated
+  (:hash "c32f19bb0fa6390183680bc024025f3d" :file "/Users/rodrigoalvesvieira/src/notes/LARGENT.org" :inode 308045)
+  :expiry 30 :last-access 1709347919.739025 :last-access-hr "2024-03-01T21:51:59-0500")
+ (:container
+  ((elisp org-element--headline-cache)
+   (elisp org-element--cache))
+  :persist-file "50/ec32a2-4ded-48dc-9335-64c97bf563b1" :associated
+  (:hash "82cf88f8ebf4c3dd52c82dd4ce3f344f" :file "/Users/rodrigoalvesvieira/src/notes/UBERMENSCH.org" :inode 308679)
+  :expiry 30 :last-access 1709347374.875781 :last-access-hr "2024-03-01T21:42:54-0500")
+ (:container
+  ((index "3.1"))
+  :persist-file "7a/c95ccf-cab1-4bbe-b071-1e0aa9d91668" :associated nil :expiry never :last-access 1709347919.742458 :last-access-hr "2024-03-01T21:51:59-0500"))
